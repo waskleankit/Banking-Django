@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Add Customer</title>
+</head>
+<body>
+    <form method="POST" action="../add/">
+        {% csrf_token %}
+        <br>Customer Name :<input type='text' type="text" name="name" value=""/>
+        <br>Gender :Male<input type='radio' type="text" name="gender" value="male"/>
+                    Female<input type='radio' type="text" name="gender" value="female"/>
+
+        <br>Account type :Savings<input type='radio' type="text" name="acc_type" value="savings"/>
+                        Current<input type='radio' type="text" name="acc_type" value="current"/>
+
+        <br>Balance :<input type='text' type="text" name="balance" value="0"/>
+        <br>Account No. :<input type='text' type="text" name="acc_no" value="0"/>
+        <br><input type="submit" />
+    </form>
+
+    {% if message%}
+    <h4>{{message}}</h4>
+    {% endif %}
+</body>
+</html>

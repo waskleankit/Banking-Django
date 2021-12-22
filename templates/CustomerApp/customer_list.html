@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+
+    {% if latest_customer_list %}
+    <ul>
+        {% for customer in latest_customer_list %}
+        <li>
+            <a href="/customer/{{customer.id}}/">{{ customer.account_no }} - {{ customer.name }}  </a> - <a href="/customer/{{customer.id}}/customer_delete">Delete</a>
+        </li>
+        {% endfor %}
+    </ul>
+    {% else %}
+    <p>No customer are availabel.</p>
+    {% endif %}
+
+</body>
+</html>
